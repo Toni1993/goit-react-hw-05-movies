@@ -1,20 +1,27 @@
 import { Routes, Route } from 'react-router-dom';
-
+import React, { lazy, Suspense } from 'react';
 import Header from './components/Header';
+import Loader from './components/Loader';
 
 import './App.css';
-import Home from 'components/Views/Home';
+
+const Home = lazy(() => import('./components/Views/Home.js'));
+const MoviesPage = lazy(() => import('./components/Views/MoviesPage.js'));
+const MovieDetailsPage = lazy(() =>
+  import('./components/Views/MovieDetailsPage.js'),
+);
 
 export default function App() {
   return (
     <div className="container">
       <Header />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/movies" element={} />
-          <Route path="/movies/:id/*" element={} /> */}
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<MoviesPage />} />
+          <Route path="/movies/:id/*" element={<MovieDetailsPage />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }
