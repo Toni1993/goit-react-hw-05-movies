@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
+    "deploy": "netlify deploy -p",
     "predeploy": "npm run build",
     "prepare": "husky install"
   },
@@ -36,7 +36,7 @@
   "bugs": {
     "url": "https://github.com/Toni1993/goit-react-hw-05-movies/issues"
   },
-  "homepage": "https://Toni1993.github.io/goit-react-hw-05-movies",
+  "homepage": "/",
   "eslintConfig": {
     "extends": [
       "react-app",
