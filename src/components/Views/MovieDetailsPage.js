@@ -2,7 +2,14 @@ import { useState, useEffect, lazy, Suspense } from 'react';
 import s from './MovieDetailsPage.module.css';
 import { getMovieDetails } from '../../Api/Api';
 import Loader from '../Loader';
-import { Link, Route, useParams, Routes, useLocation } from 'react-router-dom';
+import {
+  Link,
+  Route,
+  useParams,
+  Routes,
+  useLocation,
+  useNavigate,
+} from 'react-router-dom';
 
 const Reviews = lazy(() => import('../Reviews/Reviews.js'));
 const Cast = lazy(() => import('../Cast/Cast.js'));
@@ -11,13 +18,22 @@ export default function MovieDetailsPage() {
   const [filmDetails, setFilmDetails] = useState([]);
   const { id } = useParams();
   const location = useLocation();
+  const navigation = useNavigate();
 
   useEffect(() => {
     return getMovieDetails(id).then(setFilmDetails);
   }, [id]);
   console.log(filmDetails);
+  const onClickBack = () => {
+    const { from } = location.state;
+    navigation(from);
+  };
   return (
     <div>
+      <button type="button" onClick={onClickBack} className={s.link_back}>
+        {' '}
+        Go back{' '}
+      </button>
       <div className={s.container}>
         <div className={s.movie_img}>
           <img

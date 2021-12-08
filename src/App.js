@@ -13,15 +13,19 @@ const MovieDetailsPage = lazy(() =>
 
 export default function App() {
   return (
-    <div className="container">
-      <Header />
-      <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<MoviesPage />} />
-          <Route path="/movies/:id/*" element={<MovieDetailsPage />} />
-        </Routes>
-      </Suspense>
-    </div>
+    <>
+      <div className="container">
+        <Header />
+
+        <Suspense fallback={<Loader size={'100px'} color={'#640a0a'} />}>
+          <Routes>
+            <Route path="/" element={<Header />} />
+            <Route path="/" index element={<Home />} />
+            <Route path="/movies" element={<MoviesPage />} />
+            <Route path="/movies/:id/*" element={<MovieDetailsPage />} />
+          </Routes>
+        </Suspense>
+      </div>
+    </>
   );
 }

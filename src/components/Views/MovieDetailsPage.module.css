@@ -1,5 +1,5 @@
 .container {
-  padding: 20px 15px;
+  padding: 40px 50px;
 
   background-color: #e7c7c7;
   text-decoration: none;
@@ -48,7 +48,8 @@
   color: #b40d0d;
 }
 
-.link {
+.link,
+.link_back {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
@@ -64,20 +65,15 @@
 
   border: none;
 }
+.link_back {
+  margin-top: 5px;
+  margin-left: 50px;
+  position: absolute;
+  padding: 7px 7px;
+  text-transform: lowercase;
+}
 .link:hover {
   transition: 0.5s;
   opacity: 0.8;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.button {
-  width: 30px;
-  height: 33px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 16px;
-  background-color: transparent;
-  fill: #640a0a;
 }
