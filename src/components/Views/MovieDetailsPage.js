@@ -11,8 +11,8 @@ import {
   useNavigate,
 } from 'react-router-dom';
 
-const Reviews = lazy(() => import('../Reviews/Reviews.js'));
-const Cast = lazy(() => import('../Cast/Cast.js'));
+const Reviews = lazy(() => import('./Reviews/Reviews.js'));
+const Cast = lazy(() => import('./Cast/Cast.js'));
 
 export default function MovieDetailsPage() {
   const [filmDetails, setFilmDetails] = useState([]);
@@ -24,15 +24,15 @@ export default function MovieDetailsPage() {
     return getMovieDetails(id).then(setFilmDetails);
   }, [id]);
   console.log(filmDetails);
+
   const onClickBack = () => {
-    const { from } = location.state;
-    navigation(from);
+    navigation(location?.state?.from ?? '/');
   };
+
   return (
     <div>
       <button type="button" onClick={onClickBack} className={s.link_back}>
-        {' '}
-        Go back{' '}
+        Go back
       </button>
       <div className={s.container}>
         <div className={s.movie_img}>
@@ -88,7 +88,7 @@ export default function MovieDetailsPage() {
           </ul>
         </div>
       </div>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<Loader size={'200px'} color={'#640a0a'} />}>
         <Routes>
           <Route path="cast" element={<Cast id={id} />} />
           <Route path="reviews" element={<Reviews id={id} />} />

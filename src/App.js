@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import React, { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Loader from './components/Loader';
@@ -17,9 +17,8 @@ export default function App() {
       <div className="container">
         <Header />
 
-        <Suspense fallback={<Loader size={'100px'} color={'#640a0a'} />}>
+        <Suspense fallback={<Loader size={'200px'} color={'#640a0a'} />}>
           <Routes>
-            <Route path="/" element={<Header />} />
             <Route path="/" index element={<Home />} />
             <Route path="/movies" element={<MoviesPage />} />
             <Route path="/movies/:id/*" element={<MovieDetailsPage />} />

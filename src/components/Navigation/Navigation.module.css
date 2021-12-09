@@ -4,9 +4,19 @@
   padding: 15px;
   font-weight: 500;
   font-size: 18px;
-  color: #b40d0d;
+  color: #e76262;
 }
 .nav {
   margin-left: auto;
   margin-right: auto;
+}
+
+.active {
+  display: inline-block;
+  text-decoration: underline;
+
+  padding: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #b40d0d;
 }

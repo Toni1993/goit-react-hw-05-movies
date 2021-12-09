@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { getMovieReviews } from '../../Api/Api';
+import { getMovieReviews } from '../../../Api/Api';
 
 import s from './Reviews.module.css';
 

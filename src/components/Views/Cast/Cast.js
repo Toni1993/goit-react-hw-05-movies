@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { getMovieCredits } from '../../Api/Api';
+import { getMovieCredits } from '../../../Api/Api';
 
 import s from './Cast.module.css';
 
