@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieReviews } from '../../servises/Api';
-
 import { Title, List, Item, Description, Data } from './Reviews.styled';
 
 export default function Reviews() {
@@ -11,7 +10,7 @@ export default function Reviews() {
   useEffect(() => {
     getMovieReviews(id).then(setReviews);
   }, [id]);
-  console.log(reviews);
+
   return (
     <>
       <List>
