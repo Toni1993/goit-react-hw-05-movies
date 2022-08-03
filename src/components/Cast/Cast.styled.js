@@ -16,7 +16,6 @@ export const Title = styled.h2`
   text-align: center;
   color: #fff;
 `;
-
 export const Titlebox = styled.div`
   display: flex;
   justify-content: center;

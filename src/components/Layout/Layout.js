@@ -7,7 +7,6 @@ const Layout = () => {
   return (
     <>
       <Header />
-
       <Suspense fallback={<Loader size={'200px'} color={'#640a0a'} />}>
         <Outlet />
       </Suspense>

@@ -33,7 +33,7 @@ export default function MoviesList({ movies }) {
                     />
                   ) : (
                     <MovieImg
-                      src="https://bookslibs.info/assets/general/images/no_poster.jpg"
+                      src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"
                       alt={movie.original_title}
                     />
                   )}

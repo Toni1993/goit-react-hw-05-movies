@@ -15,7 +15,6 @@ export const Item = styled.li`
   position: relative;
   list-style: none;
   width: 275px;
-  /* flex-basis: calc((100% - 44px) / 4); */
   margin: 20px;
   background-color: #e7e7e7;
   border-radius: 2px;
@@ -64,17 +63,3 @@ export const MovieImg = styled.img`
   max-width: 265px;
   height: 398px;
 `;
-
-// .movie_details {
-//   color: #000000;
-//   font-size: 13px;
-//   font-weight: 700;
-// }
-
-// .movie {
-//   width: 275px;
-//   padding: 5px;
-// }
-// .movie_img {
-
-// }

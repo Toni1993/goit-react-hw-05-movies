@@ -4,7 +4,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { searchFilms } from '../../servises/Api';
 import MoviesList from '../../components/MoviesList/MoviesList';
-
 import { Box } from 'components/Box';
 import { Form } from './Movies.styled';
 import { Button } from './Movies.styled';

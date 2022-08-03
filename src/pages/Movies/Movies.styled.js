@@ -36,22 +36,3 @@ export const Button = styled.button`
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
 `;
-
-// .search {
-//   display: flex;
-//   justify-content: center;
-//   padding: 20px;
-//   background-color: #e7c7c7;
-// }
-
-// .form {
-
-// }
-
-// .input {
-
-// }
-
-// .button {
-
-// }
